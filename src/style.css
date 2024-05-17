@@ -1,0 +1,44 @@
+/* src/assets/styles.css */
+:root {
+  --primary-color: #3498db; /* 主题蓝 */
+  --secondary-color: #f39c12; /* 辅助橙 */
+  --background-color: #fff3e0; /* 背景色浅橙 */
+  --text-color: #34495e; /* 文字颜色 */
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* button:hover {
+  background-color: darken(var(--secondary-color), 10%);
+} */
+
+@media (max-width: 768px) {
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
