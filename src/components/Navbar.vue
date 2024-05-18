@@ -10,7 +10,7 @@
     </nav>
     <router-link to="/about" class="about" v-if="!isMobile">About Me</router-link>
     <button class="menu-button" @click="toggleMenu" v-show="isMobile">☰</button>
-    <DrawerMenu :visible="menuOpen" @update:visible="menuOpen = $event"/>
+    <DrawerMenu :visible="menuOpen && isMobile" @update:visible="menuOpen = $event" />
   </header>
 </template>
 
