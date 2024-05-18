@@ -1,5 +1,7 @@
 <template>
   <div v-if="visible" class="drawer-menu">
+    <router-link to="/" @click="toggleMenu">HOME</router-link>
+    <hr>
     <router-link to="/lego" @click="toggleMenu">LEGO</router-link>
     <router-link to="/card" @click="toggleMenu">NBA CARD</router-link>
     <router-link to="/gk" @click="toggleMenu">GK</router-link>
@@ -27,8 +29,8 @@ export default {
 .drawer-menu {
   position: absolute;
   top: 55px;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 150px;
   background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
