@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div>
     <h2 class='welcome pc'>Welcome to visit my collection 😊</h2>
     <h3 class='welcome mobile'>Welcome 😊</h3>
     <div class="photo-grid">

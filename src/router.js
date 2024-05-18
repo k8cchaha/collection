@@ -15,8 +15,10 @@ const routes = [
   { path: '/about', component: AboutView }
 ]
 
+const path = process.env.NODE_ENV === 'production' ? '/collection/' : ''
+
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(path),
   routes
 })
 

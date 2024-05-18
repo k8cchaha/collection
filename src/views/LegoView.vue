@@ -1,5 +1,5 @@
 <template>
-  <div class="main-container">
+  <div>
     <h1>Lego Collection</h1>
     <div>
       <label for="photoCount">Photos per row:</label>
