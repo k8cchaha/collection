@@ -2,21 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/collection/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + Vue</title>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <script type="module" crossorigin src="/collection/assets/index-VzFMSQSe.js"></script>
     <link rel="stylesheet" crossorigin href="/collection/assets/index-DehbQZXK.css">
-  </head>
+  
+<script>
+  if (location.pathname !== '/') {
+    location.replace(location.origin + location.pathname + '?' + location.search + location.hash);
+  }
+</script>
+</head>
   <body>
     <div id="app"></div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        if (window.location.pathname !== '/') {
-          window.history.replaceState(null, null, window.location.pathname + window.location.search);
-        }
-      });
-    </script>
   </body>
 </html>
