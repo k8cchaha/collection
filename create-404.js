@@ -7,9 +7,11 @@ const notFoundPath = path.join(process.cwd(), 'dist', '404.html');
 // 重定向脚本
 const redirectScript = `
 <script>
-  if (location.pathname !== '/') {
-    location.replace(location.origin + location.pathname + '?' + location.search + location.hash);
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.pathname !== '/') {
+    window.history.replaceState(null, null, window.location.pathname + window.location.search);
   }
+});
 </script>
 `;
 

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Lego Collection</h1>
-    <div>
-      <label for="photoCount">Photos per row:</label>
+    <h1>LEGO</h1>
+    <div class="number-row">
+      <label for="photoCount">Photos per row : </label>
       <select v-model="photosPerRow" id="photoCount">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -41,5 +41,9 @@ export default {
   display: grid;
   gap: 16px;
   margin-top: 20px;
+}
+
+.number-row {
+  text-align: right;
 }
 </style>

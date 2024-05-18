@@ -1,3 +1,3 @@
 <template>
-It is Card page
+  <h1>NBA Player Cards</h1>
 </template>

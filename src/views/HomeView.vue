@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="home-container">
     <h2 class='welcome pc'>Welcome to visit my collection 😊</h2>
     <h3 class='welcome mobile'>Welcome 😊</h3>
     <div class="photo-grid">
       <CategoryItem v-for="category in categoryList" :key="category.name"
-                    :name="category.name" :imgUrl="category.imgUrl" />
+                    :name="category.name" :imgUrl="category.imgUrl" :color="category.color"/>
     </div>
   </div>
 </template>
@@ -20,10 +20,10 @@ export default {
   data() {
     return {
       categoryList: [
-        { name: 'LEGO', imgUrl: './imgs/category/lego.jpg' },
-        { name: 'NBA CARD', imgUrl: './imgs/category/card.jpg' },
-        { name: 'GK', imgUrl: './imgs/category/gk.jpg' },
-        { name: 'TOYS', imgUrl: './imgs/category/toys.jpg' },
+        { name: 'LEGO', imgUrl: './imgs/category/lego.webp', color: 'red' },
+        { name: 'NBA CARD', imgUrl: './imgs/category/card.webp', color: 'blue' },
+        { name: 'GK', imgUrl: './imgs/category/gk.webp', color: 'green' },
+        { name: 'TOYS', imgUrl: './imgs/category/toys.webp', color: 'orange' },
       ]
     }
   }
@@ -39,25 +39,18 @@ export default {
   font-size: 46px;
 }
 
+.welcome.pc {
+  margin: 15px 0 15px 0;
+}
+
 .welcome.mobile {
   margin: 10px 0 15px 0;
 }
 
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.photo-item img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.photo-item:hover img {
-  transform: scale(1.05);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 @media (max-width: 1024px) {
@@ -84,6 +77,9 @@ export default {
   }
   .welcome.mobile {
     display: none;
+  }
+  .home-container {
+    padding: 0 20px;
   }
 }
 </style>

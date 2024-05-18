@@ -1,3 +1,3 @@
 <template>
-It is GK page
+  <h1>GK</h1>
 </template>

@@ -1,3 +1,3 @@
 <template>
-It is Toys page
+  <h1>Toys</h1>
 </template>
