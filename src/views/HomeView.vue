@@ -51,6 +51,8 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {
