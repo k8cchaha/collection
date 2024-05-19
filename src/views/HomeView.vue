@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
-    <h2 class='welcome pc'>Welcome to visit my collection 😊</h2>
-    <h3 class='welcome mobile'>Welcome 😊</h3>
+    <h2 class='welcome pc'>{{ $t('message.welcome_pc') }}</h2>
+    <h3 class='welcome mobile'>{{ $t('message.welcome_mobile') }}</h3>
     <div class="photo-grid">
       <CategoryItem v-for="category in categoryList" :key="category.name"
                     :name="category.name" :imgUrl="category.imgUrl" 

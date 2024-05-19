@@ -2,7 +2,7 @@
   <div>
     <h1>LEGO</h1>
     <div class="number-row">
-      <label for="photoCount">Photos per row : </label>
+      <label for="photoCount">Photos : </label>
       <select v-model="photosPerRow" id="photoCount">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -20,7 +20,9 @@
 
 <script>
 import LegoItem from '../components/LegoItem.vue'
-import { legoList } from '../data/lego.js'
+import { mapState } from 'pinia';
+import { useDeviceStore } from '../stores/useDeviceStore';
+import { legoList } from '../data/lego.js';
 
 export default {
   name: 'LegoView',
@@ -30,9 +32,26 @@ export default {
   data() {
     return {
       photosPerRow: 3,
-      legoList: legoList
+      legoList: legoList,
+      tempPerRow: 0
     };
-  }
+  },
+  computed: {
+    ...mapState(useDeviceStore, ['isMobile']),
+  },
+  watch: {
+    isMobile: {
+      handler(newVal, oldVal) {
+        if (newVal) {
+          this.tempPerRow = this.photosPerRow;
+          this.photosPerRow = 1;
+        } else {
+          this.photosPerRow = this.tempPerRow? this.tempPerRow: 3;
+        }
+      },
+      immediate: true,
+    }
+  },
 }
 </script>
 
@@ -40,10 +59,19 @@ export default {
 .photo-grid {
   display: grid;
   gap: 16px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .number-row {
-  text-align: right;
+  position: absolute;
+    right: 20px;
+    top: 80px;
 }
+
+@media (max-width: 768px) {
+  .number-row {
+    display: none;
+  }
+}
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="logo" @click="goHome">Alex's Collection</div>
+    <div class="logo" @click="goHome">{{ $t('message.logo') }}</div>
     <nav v-if="!isMobile">
       <router-link to="/">HOME</router-link> | 
       <router-link to="/lego">LEGO</router-link> | 
@@ -8,15 +8,18 @@
       <router-link to="/gk">GK</router-link> | 
       <router-link to="/toys">TOYS</router-link>
     </nav>
-    <router-link to="/about" class="about" v-if="!isMobile">About Me</router-link>
-    <button class="menu-button" @click="toggleMenu" v-show="isMobile">☰</button>
-    <DrawerMenu :visible="menuOpen && isMobile" @update:visible="menuOpen = $event" />
+    <div>
+      <router-link to="/about" class="about" v-if="!isMobile">About Me</router-link>
+      <button class="menu-button" @click="toggleMenu" v-show="isMobile">☰</button>
+      <DrawerMenu :visible="menuOpen && isMobile" @update:visible="menuOpen = $event" />
+    </div>
   </header>
 </template>
 
 <script>
 import { ref, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useDeviceStore } from '../stores/useDeviceStore';
 import DrawerMenu from './DrawerMenu.vue';
 
 export default {
@@ -27,7 +30,8 @@ export default {
   setup() {
     const router = useRouter();
     const menuOpen = ref(false);
-    const isMobile = ref(window.innerWidth < 768);
+    const deviceStore = useDeviceStore();
+    const isMobile = computed(() => deviceStore.isMobile);
 
     function goHome() {
       router.push('/');
@@ -36,10 +40,6 @@ export default {
     function toggleMenu() {
       menuOpen.value = !menuOpen.value;
     }
-
-    window.addEventListener('resize', () => {
-      isMobile.value = window.innerWidth < 768
-    });
 
     return { goHome, toggleMenu, menuOpen, isMobile };
   }
@@ -95,5 +95,10 @@ nav router-link:hover {
 
 .about:hover {
   text-decoration: underline;
+}
+
+.router-link-active {
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 </style>
