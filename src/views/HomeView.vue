@@ -4,7 +4,8 @@
     <h3 class='welcome mobile'>Welcome 😊</h3>
     <div class="photo-grid">
       <CategoryItem v-for="category in categoryList" :key="category.name"
-                    :name="category.name" :imgUrl="category.imgUrl" :color="category.color"/>
+                    :name="category.name" :imgUrl="category.imgUrl" 
+                    :color="category.color" :route="category.route"/>
     </div>
   </div>
 </template>
@@ -20,10 +21,10 @@ export default {
   data() {
     return {
       categoryList: [
-        { name: 'LEGO', imgUrl: './imgs/category/lego.webp', color: 'red' },
-        { name: 'NBA CARD', imgUrl: './imgs/category/card.webp', color: 'blue' },
-        { name: 'GK', imgUrl: './imgs/category/gk.webp', color: 'green' },
-        { name: 'TOYS', imgUrl: './imgs/category/toys.webp', color: 'orange' },
+        { name: 'LEGO', imgUrl: './imgs/category/lego.webp', color: 'red', route: 'lego' },
+        { name: 'NBA CARD', imgUrl: './imgs/category/card.webp', color: 'blue', route: 'card' },
+        { name: 'GK', imgUrl: './imgs/category/gk.webp', color: 'green', route: 'gk' },
+        { name: 'TOYS', imgUrl: './imgs/category/toys.webp', color: 'orange', route: 'toys' },
       ]
     }
   }

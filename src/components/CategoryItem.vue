@@ -1,5 +1,5 @@
 <template>
-  <div class="photo-item" @click="$router.push('/lego')">
+  <div class="photo-item" @click="$router.push(route)">
     <img :src="imgUrl" :alt="name">
     <div class="page-flip" :style="{ color: activeColor}">{{ name }}</div>
   </div>
@@ -11,7 +11,8 @@ export default {
   props: {
     imgUrl: String,
     name: String,
-    color: String
+    color: String,
+    route: String
   },
   data() {
     return {
