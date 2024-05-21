@@ -104,4 +104,10 @@ export default {
   background-color: #3498db;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .dropdown-toggle {
+    border-radius: 0 0 5px 5px;
+  }
+}
 </style>

@@ -8,3 +8,6 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Deploy to Github Page
 npm run deploy-full   
+
+## Web Url
+https://k8cchaha.github.io/collection/

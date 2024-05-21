@@ -14,12 +14,12 @@
     </div> -->
     <div class="filter">
       <div>
-        <button type="button" :class="{ select: mode === 'place' }" @click="switchMode('place')">場景模式</button>
+        <button type="button" class="filter-first-btn" :class="{ select: mode === 'place' }" @click="switchMode('place')">場景模式</button>
         <button type="button" :class="{ select: mode === 'data' }" @click="switchMode('data')">資料模式</button>
       </div>
       <div v-if="mode === 'place'">
         <div class="dropdown-set">
-          <div class="dropdown-title">場景：</div>
+          <div class="dropdown-title">場景切換：</div>
           <Dropdown :list="placeList" @updateSelectPlace="updateSelectPlace"/>
         </div>
       </div>
@@ -34,10 +34,19 @@
         </div>
         <div class="gap"></div>
         <div class="sub-pic">
-          <div >
-            圖片中盒組
+          <div>
+            <div>
+              <label for="detailList">圖片中盒組列表： </label>
+            </div>
+            <select v-model="selectDetail" id="detailList">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
           </div>
-
         </div>
       </div>
     </div>
@@ -68,7 +77,8 @@ export default {
       legoList: legoList,
       placeList: placeList,
       selectedPlace: placeList[0],
-      tempPerRow: 0
+      tempPerRow: 0,
+      allLego: []
     };
   },
   computed: {
@@ -88,14 +98,39 @@ export default {
     }
   },
   methods: {
+    async getLegoInfo() {
+      try {
+        const response = await fetch('/data/lego.json');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        // this.allLego = data.map((obj)=>{
+        //   return {
+        //     set: obj.set.split('-')[0],
+        //     name: 
+        //   }
+        // })
+
+        console.log('!!!!', data)
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+      }
+    },
     switchMode(mode){
       this.mode = mode;
     },
     updateSelectPlace(val) {
       this.selectedPlace = val
       console.log(this.selectedPlace)
+    },
+    updateDetailList() {
+
     }
-  }
+  },
+  mounted() {
+    this.getLegoInfo();
+  },
 }
 </script>
 
@@ -163,6 +198,24 @@ export default {
 @media (max-width: 768px) {
   .number-row {
     display: none;
+  }
+  .filter-first-btn {
+    display: block;
+  }
+  .dropdown-set {
+    flex-direction: column;
+  }
+  .dropdown-title {
+    width: 158px;
+    padding: 0;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+  }
+  .main-pic {
+    flex: 0 0 100%;
+  }
+  .content {
+    flex-direction: column;
   }
 }
 

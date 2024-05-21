@@ -1,4 +1,4 @@
 export const placeList = [
-  { name: '街景 + 大型建築', imgUrl: './imgs/lego/place/building.jpg' },
-  { name: '忍者大型 + 動畫', imgUrl: './imgs/lego/place/ninja_animate.jpg'}
+  { name: '街景 + 大型建築', imgUrl: './imgs/lego/place/building.jpg', list: [10197, 10211, 10214, 10218, 10232, 10234, 10243, 10244, 10246, 10247, 10251, 10253, 10255, 10256, 10257, 10260, 10261, 10264, 10268, 10270, 10272, 21310, 21318, 31026, 40366, 70840, 71040, 71043, 71044, 75810, 75827, 4000026, 4002015] },
+  { name: '忍者大型 + 動畫', imgUrl: './imgs/lego/place/ninja_animate.jpg', list: []}
 ]
