@@ -88,6 +88,8 @@ export default {
   padding: 10px 0;
   margin: 5px 0 0 0;
   list-style-type: none;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .dropdown-item {

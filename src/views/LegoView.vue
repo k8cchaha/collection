@@ -14,7 +14,7 @@
     </div> -->
     <div class="filter">
       <div>
-        <button type="button" class="filter-first-btn" :class="{ select: mode === 'place' }" @click="switchMode('place')">場景模式</button>
+        <button type="button" :class="{ select: mode === 'place' }" @click="switchMode('place')">場景模式</button>
         <button type="button" :class="{ select: mode === 'data' }" @click="switchMode('data')">資料模式</button>
       </div>
       <div v-if="mode === 'place'">
@@ -36,17 +36,28 @@
         <div class="sub-pic">
           <div>
             <div>
-              <label for="detailList">圖片中盒組列表： </label>
+              <label for="detailList">圖中盒組列表： </label>
             </div>
             <select v-model="selectDetail" id="detailList">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+              <option v-for="(item, index) in selectedPlace.detailList" :value="index">{{ item.set }} {{ item.title }}</option>
             </select>
+            <div v-if="selectedPlace.detailList" class="detail-view">
+              <img class="main-img" :src="selectDetailObj.mainImg" alt="">
+              <div class="sub-imgs">
+                <img v-for="imgUrl in selectDetailObj.subImgs" :src="imgUrl" :key="imgUrl" alt=""
+                 @click="clickSubImg(imgUrl)">
+              </div>
+              <div class="detail-title">{{ selectDetailObj.name }}</div>
+              <hr>
+              <div>
+                <b>系列：</b>
+                <span>{{ displayTheme }}</span>
+              </div>
+            </div>
           </div>
+          <div class="next">
+                <button @click="next">下一筆</button>
+              </div>
         </div>
       </div>
     </div>
@@ -77,12 +88,20 @@ export default {
       legoList: legoList,
       placeList: placeList,
       selectedPlace: placeList[0],
+      selectDetail: 0,
+      selectDetailIdx: 0,
       tempPerRow: 0,
       allLego: []
     };
   },
   computed: {
     ...mapState(useDeviceStore, ['isMobile']),
+    selectDetailObj() {
+      return this.selectedPlace.detailList[this.selectDetail]
+    },
+    displayTheme() {
+      return this.selectDetailObj.theme.join(' & ')
+    }
   },
   watch: {
     isMobile: {
@@ -99,20 +118,32 @@ export default {
   },
   methods: {
     async getLegoInfo() {
+      const imgSource = 'https://www.brickeconomy.com';
+
       try {
         const response = await fetch('/data/lego.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        // this.allLego = data.map((obj)=>{
-        //   return {
-        //     set: obj.set.split('-')[0],
-        //     name: 
-        //   }
-        // })
+        this.allLego = data.map((obj)=>{
+          return {
+            set: obj.Set.split('-')[0],
+            name: obj.Name,
+            title: obj.Title,
+            grown: obj.Growth,
+            theme: obj.Theme.split(' \/ '),
+            mainImg: imgSource + obj['main-img'],
+            subImgs: obj['sub-imgs'].map((url)=>{
+              return imgSource + url;
+            })
+          }
+        })
+        this.updateDetailList();
 
-        console.log('!!!!', data)
+        if (localStorage) {
+          localStorage.setItem('lego', JSON.stringify(this.allLego))
+        }
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
       }
@@ -121,15 +152,33 @@ export default {
       this.mode = mode;
     },
     updateSelectPlace(val) {
-      this.selectedPlace = val
-      console.log(this.selectedPlace)
+      this.selectedPlace = val;
+      this.updateDetailList()
     },
     updateDetailList() {
-
+      this.selectedPlace.detailList = []
+      this.allLego.forEach((item)=> {
+        if (this.selectedPlace.list.includes(Number(item.set))) {
+          this.selectedPlace.detailList.push(item);
+        }
+      })
+      this.selectDetail = 0;
+    },
+    clickSubImg(url) {
+      const newUrl = url.replace('thumb', 'large').replace('png', 'jpg')
+      this.selectDetailObj.mainImg = newUrl;
+    },
+    next() {
+      this.selectDetail = (this.selectDetail == this.selectedPlace.detailList.length-1)? 0 : this.selectDetail+1;
     }
   },
   mounted() {
-    this.getLegoInfo();
+    if (localStorage && localStorage.getItem('lego')) {
+      this.allLego = JSON.parse(localStorage.getItem('lego'));
+      this.updateDetailList();
+    } else {
+      this.getLegoInfo();
+    }    
   },
 }
 </script>
@@ -184,7 +233,7 @@ export default {
   flex: 0 0 70%;
 }
 .main-pic img {
-  max-width: 100%;
+  width: 100%;
   vertical-align: middle;
 }
 .gap {
@@ -192,15 +241,73 @@ export default {
 }
 .sub-pic {
   flex: 0 0 28%;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 640px;
+}
+#detailList {
+  margin: 5px 0;
+  width: 100%;
+  height: 28px;
+  font-size: 16px;
+}
+.detail-view {
+  text-align: center;
+}
+.detail-view .main-img {
+  max-width: 100%;
+  max-height: 35vh;
+}
+.detail-view .sub-imgs {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 5px;
+  height: 72px;
+}
+.detail-view .sub-imgs img {
+  background-color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.detail-title {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-style: normal;
+  margin: 10px 5px;
+  font-size: 20px;
+}
+.next {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.next button {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  padding: 0;
+}
 
+hr {
+  width: 100%;
+  display: block;
+  border-style: inset;
+  border-width: 1px;
 }
 
 @media (max-width: 768px) {
   .number-row {
     display: none;
-  }
-  .filter-first-btn {
-    display: block;
   }
   .dropdown-set {
     flex-direction: column;
