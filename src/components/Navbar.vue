@@ -8,30 +8,46 @@
       <router-link to="/gk">GK</router-link> | 
       <router-link to="/toys">TOYS</router-link>
     </nav>
-    <div>
-      <router-link to="/about" class="about" v-if="!isMobile">About Me</router-link>
+    <div class="info">
+      <button class="login" @click="openModal" v-if="!loginUser">登入</button>
+      <div class="user-name" v-else>
+        <span @click="openLogout">{{ loginUser }}</span>
+      </div>
+      <!-- <router-link to="/about" class="about" v-if="!isMobile">About Me</router-link> -->
       <button class="menu-button" @click="toggleMenu" v-show="isMobile">☰</button>
       <DrawerMenu :visible="menuOpen && isMobile" @update:visible="menuOpen = $event" />
     </div>
+    <LoginModal ref="loginModal" />
+    <LogoutModal ref="logoutModal" />
   </header>
 </template>
 
 <script>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useDeviceStore } from '../stores/useDeviceStore';
+import { useUserStore } from '../stores/useUserStore';
 import DrawerMenu from './DrawerMenu.vue';
+import LoginModal from './LoginModal.vue';
+import LogoutModal from './LogoutModal.vue';
 
 export default {
   name: 'Navbar',
   components: {
-    DrawerMenu
+    DrawerMenu,
+    LoginModal,
+    LogoutModal
   },
   setup() {
     const router = useRouter();
     const menuOpen = ref(false);
+    const userOpen = ref(false);
     const deviceStore = useDeviceStore();
+    const userStore = useUserStore();
     const isMobile = computed(() => deviceStore.isMobile);
+    const loginUser = computed(() => userStore.userName);
+    const loginModal = ref(null);
+    const logoutModal = ref(null);
 
     function goHome() {
       router.push('/');
@@ -41,7 +57,21 @@ export default {
       menuOpen.value = !menuOpen.value;
     }
 
-    return { goHome, toggleMenu, menuOpen, isMobile };
+    function openLogout() {
+      logoutModal.value.openModal();
+    }
+
+    function openModal() {
+      loginModal.value.openModal();
+    }
+
+    onMounted(() => {
+      if (localStorage.getItem('user')) {
+        userStore.setUserInfo(JSON.parse(localStorage.getItem('user')))
+      }
+    })
+
+    return { goHome, toggleMenu, openModal, openLogout, menuOpen, userOpen, isMobile, loginModal, logoutModal, loginUser};
   }
 }
 </script>
@@ -100,5 +130,31 @@ nav router-link:hover {
 .router-link-active {
   color: var(--secondary-color);
   font-weight: bold;
+}
+
+.login {
+  padding: 5px 20px;
+  background-color: white;
+  border: solid 1px var(--secondary-color);
+  color: var(--secondary-color);
+}
+.login:hover {
+  background-color: var(--secondary-color);
+  color:white;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .login {
+    margin-right: 10px;
+  }
 }
 </style>

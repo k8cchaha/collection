@@ -1,21 +1,9 @@
 <template>
   <div>
-    <!-- <h1>LEGO</h1> -->
-    <!-- <div class="number-row">
-      <label for="photoCount">Photos : </label>
-      <select v-model="photosPerRow" id="photoCount">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-    </div> -->
     <div class="filter">
       <div>
         <button type="button" :class="{ select: mode === 'place' }" @click="switchMode('place')">場景模式</button>
-        <button type="button" :class="{ select: mode === 'data' }" @click="switchMode('data')">資料模式</button>
+        <button type="button" :class="{ select: mode === 'data' }" @click="switchMode('data')">樂高清單</button>
       </div>
       <div v-if="mode === 'place'">
         <div class="dropdown-set">
@@ -23,8 +11,14 @@
           <Dropdown :list="placeList" @updateSelectPlace="updateSelectPlace"/>
         </div>
       </div>
-      <div v-if="mode === 'data'">
-        
+      <div v-else class="sub-filter">
+        <select v-model="selectCategory" id="categoryList" :disabled="isMyList && userStore.isLogin">
+          <option v-for="item in legoCategory" :value="item">{{ item }}</option>
+        </select>
+        <div >
+          <input type="checkbox" id="isMyList" v-model="isMyList" :disabled="!userStore.isLogin" />
+          <label for="isMyList">我的購買清單</label>
+        </div>
       </div>
     </div>
     <div v-show="mode === 'place'">
@@ -56,14 +50,18 @@
             </div>
           </div>
           <div class="next">
-                <button @click="next">下一筆</button>
-              </div>
+            <button @click="next">下一筆</button>
+          </div>
         </div>
       </div>
     </div>
-    <div v-show="mode === 'data'" class="photo-grid" :style="{ gridTemplateColumns: `repeat(${photosPerRow}, 1fr)` }">
-      <LegoItem v-for="item in legoList" :key="item.id" :item="item" />
+    <div v-show="mode === 'data'" class="data-view">
+      <ShopList :list="allLego" :isMyList="isMyList" :category="selectCategory"/>
     </div>
+    <!-- <div v-show="mode === 'data'" class="photo-grid" :style="{ gridTemplateColumns: `repeat(${photosPerRow}, 1fr)` }">
+      <ShopList />
+      <LegoItem v-for="item in legoList" :key="item.id" :item="item" />
+    </div> -->
   </div>
 </template>
 
@@ -72,15 +70,18 @@ import LegoItem from '../components/LegoItem.vue';
 import Dropdown from '../components/Dropdown.vue';
 import { mapState } from 'pinia';
 import { useDeviceStore } from '../stores/useDeviceStore';
+import { useUserStore } from '../stores/useUserStore';
 import { legoList } from '../data/lego.js';
 import { placeList } from '../data/place.js';
+import ShopList from '../components/ShopList.vue';
 
 export default {
   name: 'LegoView',
   components: {
     LegoItem,
-    Dropdown
-  },
+    Dropdown,
+    ShopList
+},
   data() {
     return {
       mode: 'place',
@@ -91,7 +92,12 @@ export default {
       selectDetail: 0,
       selectDetailIdx: 0,
       tempPerRow: 0,
-      allLego: []
+      allLego: [],
+      dataMode: 'myData',
+      legoCategory: [],
+      isMyList: true,
+      selectCategory: '',
+      userStore: useUserStore()
     };
   },
   computed: {
@@ -114,14 +120,15 @@ export default {
         }
       },
       immediate: true,
-    }
+    },
   },
   methods: {
     async getLegoInfo() {
       const imgSource = 'https://www.brickeconomy.com';
 
       try {
-        const response = await fetch('/data/lego.json');
+        const sourcePathBase = process.env.NODE_ENV === 'production' ? '/collection' : '';
+        const response = await fetch(sourcePathBase + '/data/lego.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -131,8 +138,9 @@ export default {
             set: obj.Set.split('-')[0],
             name: obj.Name,
             title: obj.Title,
+            new: obj.New,
             grown: obj.Growth,
-            theme: obj.Theme.split(' \/ '),
+            theme: obj.Theme.replace('Icons', 'CREATOR').split(' \/ '),
             mainImg: imgSource + obj['main-img'],
             subImgs: obj['sub-imgs'].map((url)=>{
               return imgSource + url;
@@ -156,13 +164,16 @@ export default {
       this.updateDetailList()
     },
     updateDetailList() {
+      const temp = new Set();
       this.selectedPlace.detailList = []
       this.allLego.forEach((item)=> {
         if (this.selectedPlace.list.includes(Number(item.set))) {
           this.selectedPlace.detailList.push(item);
         }
+        temp.add(...item.theme)
       })
       this.selectDetail = 0;
+      this.legoCategory = Array.from(temp)
     },
     clickSubImg(url) {
       const newUrl = url.replace('thumb', 'large').replace('png', 'jpg')
@@ -178,7 +189,7 @@ export default {
       this.updateDetailList();
     } else {
       this.getLegoInfo();
-    }    
+    }
   },
 }
 </script>
@@ -305,6 +316,22 @@ hr {
   border-width: 1px;
 }
 
+.data-view {
+  margin-top: 10px;
+}
+
+.sub-filter {
+  display: flex;
+  align-items: center;
+}
+
+#categoryList {
+  font-size: 16px;
+  height: 28px;
+  width: 240px;
+  margin-right: 10px;
+}
+
 @media (max-width: 768px) {
   .number-row {
     display: none;
@@ -323,6 +350,19 @@ hr {
   }
   .content {
     flex-direction: column;
+  }
+  .gap {
+    flex: none;
+    height: 10px;
+  }
+  .sub-filter {
+    flex-direction: column-reverse;
+  }
+  #categoryList {
+    font-size: 14px;
+    height: 24px;
+    width: 130px;
+    margin-right: 0;
   }
 }
 
