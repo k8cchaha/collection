@@ -14,7 +14,7 @@
       
       <div class="modal-buttons">
         <button @click="closeModal">取消</button>
-        <button @click="login">確認</button>
+        <button @click="login" :disabled="!username || !password">確認</button>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 
 <script>
 import { useUserStore } from '../stores/useUserStore';
+import { userList } from '../data/user.js';
 
 export default {
   data() {
@@ -29,7 +30,8 @@ export default {
       showModal: false,
       username: '',
       password: '',
-      userStore: useUserStore()
+      userStore: useUserStore(),
+      userList: userList
     };
   },
   methods: {
@@ -42,15 +44,22 @@ export default {
       this.password = '';
     },
     login() {
-      // 找到
-      console.log('XXXX',this.username)
-      this.userStore.setUserInfo({
-        name: `嗨! ${this.username}`,
-        pickup: true,
-        list: [10013, 10027]
-      })
-      console.log(`Logging in with username: ${this.username}`);
-      this.closeModal();
+      let isSuccess = false;
+      for (let i = 0; i < this.userList.length; i++) {
+        if (this.userList[i].account === this.username && this.userList[i].password == this.password) {
+          this.userStore.setUserInfo({
+            name: `嗨! ${this.userList[i].name}`,
+            pickup: this.userList[i].pickup == '1'? true : false,
+            list: this.userList[i].list.map((item)=>Number(item))
+          })
+          isSuccess = true;
+          this.closeModal();
+          break;
+        }
+      }
+      if (!isSuccess) {
+        alert('抱歉!錯誤的帳號或密碼, 請聯繫 Alex')
+      }
     }
   }
 };
@@ -102,6 +111,11 @@ export default {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.modal .modal-buttons button:disabled, .modal .modal-buttons button[disabled] {
+  background-color: gray;
+  cursor: no-drop;
 }
 
 .modal-buttons button:first-child {
