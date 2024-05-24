@@ -9,7 +9,8 @@ export const userList = [
       "42100",
       "42000"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego101",
@@ -21,7 +22,8 @@ export const userList = [
       "10185",
       "10190"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego102",
@@ -50,7 +52,8 @@ export const userList = [
       "8016",
       "75049"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego103",
@@ -71,7 +74,8 @@ export const userList = [
       "71022",
       ""
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego104",
@@ -84,7 +88,8 @@ export const userList = [
       "21313",
       "21310"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego105",
@@ -100,7 +105,8 @@ export const userList = [
       "60228",
       "60229"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego106",
@@ -111,7 +117,8 @@ export const userList = [
       "21303",
       "75952"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego107",
@@ -124,7 +131,8 @@ export const userList = [
       "75244",
       "76042"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego108",
@@ -135,7 +143,8 @@ export const userList = [
       "70677",
       "70674"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego109",
@@ -150,7 +159,8 @@ export const userList = [
       "7752",
       "8016"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego110",
@@ -169,7 +179,8 @@ export const userList = [
       "76124",
       "76126"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego111",
@@ -179,7 +190,8 @@ export const userList = [
     "list": [
       "75810"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego112",
@@ -194,7 +206,8 @@ export const userList = [
       "80102",
       "70922"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego113",
@@ -211,7 +224,8 @@ export const userList = [
       "70618",
       "70657"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego114",
@@ -228,7 +242,8 @@ export const userList = [
       "21319",
       "70840"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego115",
@@ -240,7 +255,8 @@ export const userList = [
       "75244",
       "7659"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego116",
@@ -256,7 +272,8 @@ export const userList = [
       "7637",
       "4207"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego117",
@@ -264,7 +281,8 @@ export const userList = [
     "name": "鄭名哲",
     "pickup": 1,
     "list": [],
-    "set": "街景 + 大型建築"
+    "set": "街景 + 大型建築",
+    "not": ""
   },
   {
     "account": "lego118",
@@ -279,7 +297,8 @@ export const userList = [
       "76023",
       "42056"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego119",
@@ -296,7 +315,8 @@ export const userList = [
       "75252",
       "75192"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego120",
@@ -307,7 +327,8 @@ export const userList = [
       "71043",
       "71044"
     ],
-    "set": "哈利波特"
+    "set": "哈利波特",
+    "not": ""
   },
   {
     "account": "lego121",
@@ -321,7 +342,8 @@ export const userList = [
       "71020",
       "71026"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego122",
@@ -334,7 +356,8 @@ export const userList = [
       "71006",
       "21303"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego123",
@@ -348,7 +371,8 @@ export const userList = [
       "71000",
       "71001"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego124",
@@ -359,7 +383,8 @@ export const userList = [
       "71043",
       "76392"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego125",
@@ -371,7 +396,8 @@ export const userList = [
       "75827",
       "10236"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego126",
@@ -382,7 +408,8 @@ export const userList = [
       "75936",
       "21028"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego127",
@@ -393,7 +420,8 @@ export const userList = [
       "75192",
       "75252"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego128",
@@ -404,7 +432,8 @@ export const userList = [
       "10251",
       "10197"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego129",
@@ -424,7 +453,8 @@ export const userList = [
       "21307",
       "4002019"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego130",
@@ -445,7 +475,8 @@ export const userList = [
       "75273",
       "75200"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego131",
@@ -467,7 +498,8 @@ export const userList = [
       "9465",
       "10241"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego132",
@@ -479,7 +511,8 @@ export const userList = [
       "21310",
       "75810"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego133",
@@ -491,7 +524,8 @@ export const userList = [
       "70657",
       "70751"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego134",
@@ -502,7 +536,8 @@ export const userList = [
       "21311",
       "75810"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego135",
@@ -515,7 +550,8 @@ export const userList = [
       "75101",
       "10236"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego136",
@@ -523,7 +559,8 @@ export const userList = [
     "name": "呂怡慧",
     "pickup": 0,
     "list": [],
-    "set": "全"
+    "set": "全",
+    "not": ""
   },
   {
     "account": "lego137",
@@ -534,7 +571,8 @@ export const userList = [
       "75810",
       "21318"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego138",
@@ -544,7 +582,8 @@ export const userList = [
     "list": [
       "10272"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego139",
@@ -552,7 +591,8 @@ export const userList = [
     "name": "王正凱",
     "pickup": 1,
     "list": [],
-    "set": "中世紀;英雄系列;星際大戰I;星際大戰II"
+    "set": "中世紀;英雄系列;星際大戰I;星際大戰II",
+    "not": ""
   },
   {
     "account": "lego140",
@@ -565,7 +605,8 @@ export const userList = [
       "75159",
       "70923"
     ],
-    "set": "City 太空"
+    "set": "City 太空",
+    "not": ""
   },
   {
     "account": "lego141",
@@ -584,7 +625,8 @@ export const userList = [
       "40367",
       "80101"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego142",
@@ -597,7 +639,8 @@ export const userList = [
       "10243",
       "10264"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego143",
@@ -607,7 +650,8 @@ export const userList = [
     "list": [
       "60262"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego144",
@@ -625,7 +669,8 @@ export const userList = [
       "70751",
       "71741"
     ],
-    "set": "City 太空"
+    "set": "City 太空",
+    "not": ""
   },
   {
     "account": "lego145",
@@ -640,7 +685,8 @@ export const userList = [
       "10223",
       "10193"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego146",
@@ -651,7 +697,8 @@ export const userList = [
       "7997",
       "7939"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego147",
@@ -664,7 +711,8 @@ export const userList = [
       "10256",
       "10242"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego148",
@@ -675,7 +723,8 @@ export const userList = [
       "75021",
       "75192"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego149",
@@ -689,7 +738,8 @@ export const userList = [
       "21103",
       "40338"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego150",
@@ -700,7 +750,8 @@ export const userList = [
       "10248",
       "76139"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego151",
@@ -713,7 +764,8 @@ export const userList = [
       "75810",
       "70840"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego152",
@@ -730,7 +782,8 @@ export const userList = [
       "21301",
       "21321"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego153",
@@ -759,7 +812,8 @@ export const userList = [
       "10771",
       "7598"
     ],
-    "set": "人偶"
+    "set": "人偶",
+    "not": ""
   },
   {
     "account": "lego154",
@@ -767,7 +821,8 @@ export const userList = [
     "name": "王翊帆",
     "pickup": 0,
     "list": [],
-    "set": "全"
+    "set": "全",
+    "not": ""
   },
   {
     "account": "lego155",
@@ -778,7 +833,8 @@ export const userList = [
       "71741",
       "75810"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego156",
@@ -790,7 +846,8 @@ export const userList = [
       "71016",
       "3818"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego157",
@@ -798,7 +855,8 @@ export const userList = [
     "name": "陳博彥",
     "pickup": 0,
     "list": [],
-    "set": "人偶"
+    "set": "人偶",
+    "not": ""
   },
   {
     "account": "lego158",
@@ -822,7 +880,8 @@ export const userList = [
       "70923",
       "9465"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego159",
@@ -836,7 +895,8 @@ export const userList = [
       "10218",
       "10197"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego160",
@@ -850,7 +910,8 @@ export const userList = [
       "10197",
       "10251"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego161",
@@ -859,11 +920,11 @@ export const userList = [
     "pickup": 0,
     "list": [
       "42056",
-      "42096",
       "21026",
       "21027"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego162",
@@ -876,7 +937,8 @@ export const userList = [
       "21311",
       "3818"
     ],
-    "set": "冬季雪系列"
+    "set": "冬季雪系列",
+    "not": ""
   },
   {
     "account": "lego163",
@@ -889,7 +951,8 @@ export const userList = [
       "10248",
       "10252"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego164",
@@ -901,7 +964,8 @@ export const userList = [
       "70620",
       "70657"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego165",
@@ -911,7 +975,8 @@ export const userList = [
     "list": [
       "21303"
     ],
-    "set": "星際大戰I;星際大戰II"
+    "set": "星際大戰I;星際大戰II",
+    "not": ""
   },
   {
     "account": "lego166",
@@ -922,7 +987,8 @@ export const userList = [
       "76042",
       "4002019"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego167",
@@ -959,7 +1025,8 @@ export const userList = [
       "76137",
       "76138"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego168",
@@ -967,7 +1034,8 @@ export const userList = [
     "name": "李岳叡",
     "pickup": 0,
     "list": [],
-    "set": "City 鐵路"
+    "set": "City 鐵路",
+    "not": ""
   },
   {
     "account": "lego169",
@@ -978,7 +1046,8 @@ export const userList = [
       "42096",
       "42115"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego170",
@@ -993,7 +1062,8 @@ export const userList = [
       "10188",
       "75021"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego171",
@@ -1006,7 +1076,8 @@ export const userList = [
       "10251",
       "70922"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego172",
@@ -1018,7 +1089,8 @@ export const userList = [
       "10253",
       ""
     ],
-    "set": "哈利波特"
+    "set": "哈利波特",
+    "not": 75952
   },
   {
     "account": "lego173",
@@ -1029,7 +1101,8 @@ export const userList = [
       "10242",
       "10248"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego174",
@@ -1040,7 +1113,8 @@ export const userList = [
       "42056",
       "42083"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego175",
@@ -1052,7 +1126,8 @@ export const userList = [
       "42115",
       "42083"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego176",
@@ -1062,7 +1137,8 @@ export const userList = [
     "list": [
       "4002019"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego177",
@@ -1077,7 +1153,8 @@ export const userList = [
       "7326",
       "7327"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego178",
@@ -1088,7 +1165,8 @@ export const userList = [
       "10186",
       "10265"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego179",
@@ -1100,7 +1178,8 @@ export const userList = [
       "75252",
       "75244"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego180",
@@ -1108,7 +1187,8 @@ export const userList = [
     "name": "江貞毅",
     "pickup": 0,
     "list": [],
-    "set": "中國風"
+    "set": "中國風",
+    "not": ""
   },
   {
     "account": "lego181",
@@ -1140,7 +1220,8 @@ export const userList = [
       "4000026",
       "31026"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego182",
@@ -1151,7 +1232,8 @@ export const userList = [
       "10211",
       "10251"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego183",
@@ -1164,7 +1246,8 @@ export const userList = [
       "71034",
       "71045"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego184",
@@ -1174,7 +1257,8 @@ export const userList = [
     "list": [
       "21303"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego185",
@@ -1188,7 +1272,8 @@ export const userList = [
       "10242",
       "10252"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego186",
@@ -1214,7 +1299,8 @@ export const userList = [
       "71021",
       "71025"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego187",
@@ -1225,7 +1311,8 @@ export const userList = [
       "70917",
       "76023"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego188",
@@ -1240,7 +1327,8 @@ export const userList = [
       "3300001",
       "40153"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego189",
@@ -1250,7 +1338,8 @@ export const userList = [
     "list": [
       "21050"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego190",
@@ -1261,7 +1350,8 @@ export const userList = [
       "10247",
       "10257"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego191",
@@ -1294,7 +1384,8 @@ export const userList = [
       "10243",
       "80102"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego192",
@@ -1305,7 +1396,8 @@ export const userList = [
       "70620",
       "70657"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego193",
@@ -1327,7 +1419,8 @@ export const userList = [
       "80103",
       "80104"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego194",
@@ -1339,7 +1432,8 @@ export const userList = [
       "70917",
       "70923"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego195",
@@ -1351,7 +1445,8 @@ export const userList = [
       "3831",
       "10259"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego196",
@@ -1362,7 +1457,8 @@ export const userList = [
       "70922",
       "70917"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego197",
@@ -1370,7 +1466,8 @@ export const userList = [
     "name": "Sheng-Kung Hsu",
     "pickup": "",
     "list": [],
-    "set": "星際大戰I;星際大戰II;英雄系列"
+    "set": "星際大戰I;星際大戰II;英雄系列",
+    "not": ""
   },
   {
     "account": "lego198",
@@ -1380,7 +1477,8 @@ export const userList = [
     "list": [
       "42063"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego199",
@@ -1394,7 +1492,8 @@ export const userList = [
       "71000",
       "8909"
     ],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego200",
@@ -1402,7 +1501,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego201",
@@ -1410,7 +1510,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego202",
@@ -1418,7 +1519,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego203",
@@ -1426,7 +1528,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego204",
@@ -1434,7 +1537,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego205",
@@ -1442,7 +1546,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego206",
@@ -1450,7 +1555,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego207",
@@ -1458,7 +1564,8 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   },
   {
     "account": "lego208",
@@ -1466,6 +1573,7 @@ export const userList = [
     "name": "",
     "pickup": "",
     "list": [],
-    "set": ""
+    "set": "",
+    "not": ""
   }
 ]

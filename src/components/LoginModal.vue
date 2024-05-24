@@ -22,7 +22,7 @@
 
 <script>
 import { useUserStore } from '../stores/useUserStore';
-import { userList } from '../data/userxx8.js';
+import { userList } from '../data/userxx9.js';
 import { placeList } from '../data/placex2.js';
 
 export default {
@@ -63,6 +63,10 @@ export default {
           if (this.userList[i].set === '全') {
             const allLego = JSON.parse(localStorage.getItem('lego'));
             fromSet.push(...allLego.map((item)=>Number(item.set)))
+          }
+          if (this.userList[i].not !== '') {
+            const idx = fromSet.indexOf(Number(this.userList[i].not));
+            fromSet.splice(idx, 1);
           }
           
           this.userStore.setUserInfo({
