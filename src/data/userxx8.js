@@ -828,7 +828,7 @@ export const userList = [
     "account": "lego159",
     "password": 3233,
     "name": "James Liao",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "10251",
       "10232",
@@ -841,310 +841,628 @@ export const userList = [
   {
     "account": "lego160",
     "password": 9289,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "林受廣",
+    "pickup": 0,
+    "list": [
+      "10246",
+      "71040",
+      "70751",
+      "10197",
+      "10251"
+    ],
     "set": ""
   },
   {
     "account": "lego161",
     "password": 9395,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "單家揚",
+    "pickup": 0,
+    "list": [
+      "42056",
+      "42096",
+      "21026",
+      "21027"
+    ],
     "set": ""
   },
   {
     "account": "lego162",
     "password": 2394,
-    "name": "",
-    "pickup": "",
-    "list": [],
-    "set": ""
+    "name": "Yvonne Lee",
+    "pickup": 0,
+    "list": [
+      "10214",
+      "10253",
+      "21311",
+      "3818"
+    ],
+    "set": "冬季雪系列"
   },
   {
     "account": "lego163",
     "password": 3363,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Handy Kuo",
+    "pickup": 0,
+    "list": [
+      "21050",
+      "21320",
+      "10248",
+      "10252"
+    ],
     "set": ""
   },
   {
     "account": "lego164",
     "password": 5907,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Chiyin Hsu",
+    "pickup": 0,
+    "list": [
+      "70751",
+      "70620",
+      "70657"
+    ],
     "set": ""
   },
   {
     "account": "lego165",
     "password": 4055,
-    "name": "",
-    "pickup": "",
-    "list": [],
-    "set": ""
+    "name": "Jay Chieh-Hsiu Lu",
+    "pickup": 0,
+    "list": [
+      "21303"
+    ],
+    "set": "星際大戰I;星際大戰II"
   },
   {
     "account": "lego166",
     "password": 3411,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "SungMung Huang",
+    "pickup": 0,
+    "list": [
+      "76042",
+      "4002019"
+    ],
     "set": ""
   },
   {
     "account": "lego167",
     "password": 9797,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "阮睿齊",
+    "pickup": 0,
+    "list": [
+      "70916",
+      "70917",
+      "76126",
+      "76042",
+      "70922",
+      "70923",
+      "10672",
+      "6865",
+      "70905",
+      "76000",
+      "76001",
+      "76005",
+      "76009",
+      "76025",
+      "76023",
+      "76039",
+      "76046",
+      "76049",
+      "76081",
+      "76084",
+      "76095",
+      "76096",
+      "76109",
+      "76118",
+      "76120",
+      "76122",
+      "76137",
+      "76138"
+    ],
     "set": ""
   },
   {
     "account": "lego168",
     "password": 2578,
-    "name": "",
-    "pickup": "",
+    "name": "李岳叡",
+    "pickup": 0,
     "list": [],
-    "set": ""
+    "set": "City 鐵路"
   },
   {
     "account": "lego169",
     "password": 4881,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "劉奕",
+    "pickup": 0,
+    "list": [
+      "42096",
+      "42115"
+    ],
     "set": ""
   },
   {
     "account": "lego170",
     "password": 6643,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "許書麟",
+    "pickup": 0,
+    "list": [
+      "4002019",
+      "7752",
+      "7754",
+      "65159",
+      "10188",
+      "75021"
+    ],
     "set": ""
   },
   {
     "account": "lego171",
     "password": 6227,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "張皓翔",
+    "pickup": 0,
+    "list": [
+      "70840",
+      "76023",
+      "10251",
+      "70922"
+    ],
     "set": ""
   },
   {
     "account": "lego172",
     "password": 6814,
-    "name": "",
-    "pickup": "",
-    "list": [],
-    "set": ""
+    "name": "Christina Hsu",
+    "pickup": 0,
+    "list": [
+      "10214",
+      "10253",
+      ""
+    ],
+    "set": "哈利波特"
   },
   {
     "account": "lego173",
     "password": 1825,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Li Shan Lin",
+    "pickup": 0,
+    "list": [
+      "10242",
+      "10248"
+    ],
     "set": ""
   },
   {
     "account": "lego174",
     "password": 7915,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "王孟威",
+    "pickup": 0,
+    "list": [
+      "42056",
+      "42083"
+    ],
     "set": ""
   },
   {
     "account": "lego175",
     "password": 3611,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Jing Syu Chen",
+    "pickup": 0,
+    "list": [
+      "42056",
+      "42115",
+      "42083"
+    ],
     "set": ""
   },
   {
     "account": "lego176",
     "password": 3329,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "KaLon Chan",
+    "pickup": 0,
+    "list": [
+      "4002019"
+    ],
     "set": ""
   },
   {
     "account": "lego177",
     "password": 3129,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Yuan Zeng",
+    "pickup": 0,
+    "list": [
+      "21316",
+      "3831",
+      "3834",
+      "7325",
+      "7326",
+      "7327"
+    ],
     "set": ""
   },
   {
     "account": "lego178",
     "password": 7749,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "周恩頡",
+    "pickup": 0,
+    "list": [
+      "10186",
+      "10265"
+    ],
     "set": ""
   },
   {
     "account": "lego179",
     "password": 2280,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "陳謙",
+    "pickup": 1,
+    "list": [
+      "75192",
+      "75252",
+      "75244"
+    ],
     "set": ""
   },
   {
     "account": "lego180",
     "password": 1745,
-    "name": "",
-    "pickup": "",
+    "name": "江貞毅",
+    "pickup": 0,
     "list": [],
-    "set": ""
+    "set": "中國風"
   },
   {
     "account": "lego181",
     "password": 6736,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "社長家華",
+    "pickup": 0,
+    "list": [
+      "70617",
+      "70618",
+      "70620",
+      "70654",
+      "70656",
+      "70657",
+      "70677",
+      "70751",
+      "71741",
+      "21311",
+      "71040",
+      "75917",
+      "75936",
+      "10256",
+      "10272",
+      "75810",
+      "10268",
+      "70840",
+      "10218",
+      "10257",
+      "4002015",
+      "4000026",
+      "31026"
+    ],
     "set": ""
   },
   {
     "account": "lego182",
     "password": 3852,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "洪嘉敏",
+    "pickup": 0,
+    "list": [
+      "10211",
+      "10251"
+    ],
     "set": ""
   },
   {
     "account": "lego183",
     "password": 2731,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "張小強",
+    "pickup": 0,
+    "list": [
+      "71025",
+      "71027",
+      "71034",
+      "71045"
+    ],
     "set": ""
   },
   {
     "account": "lego184",
     "password": 4091,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Ruby Kao",
+    "pickup": 0,
+    "list": [
+      "21303"
+    ],
     "set": ""
   },
   {
     "account": "lego185",
     "password": 3673,
-    "name": "",
+    "name": "T.J. Chou",
     "pickup": "",
-    "list": [],
+    "list": [
+      "10248",
+      "10220",
+      "10241",
+      "10242",
+      "10252"
+    ],
     "set": ""
   },
   {
     "account": "lego186",
     "password": 7529,
-    "name": "",
+    "name": "林俊翰",
     "pickup": "",
-    "list": [],
+    "list": [
+      "8683",
+      "8684",
+      "8803",
+      "8804",
+      "8805",
+      "8827",
+      "8833",
+      "71000",
+      "71001",
+      "71007",
+      "71008",
+      "71010",
+      "71011",
+      "71013",
+      "71018",
+      "71021",
+      "71025"
+    ],
     "set": ""
   },
   {
     "account": "lego187",
     "password": 9615,
-    "name": "",
+    "name": "張皓智",
     "pickup": "",
-    "list": [],
+    "list": [
+      "70917",
+      "76023"
+    ],
     "set": ""
   },
   {
     "account": "lego188",
     "password": 7150,
-    "name": "",
+    "name": "許子婕",
     "pickup": "",
-    "list": [],
+    "list": [
+      "3818",
+      "71016",
+      "7598",
+      "21302",
+      "3300001",
+      "40153"
+    ],
     "set": ""
   },
   {
     "account": "lego189",
     "password": 2863,
-    "name": "",
+    "name": "李政廷",
     "pickup": "",
-    "list": [],
+    "list": [
+      "21050"
+    ],
     "set": ""
   },
   {
     "account": "lego190",
     "password": 7924,
-    "name": "",
+    "name": "許甯涵",
     "pickup": "",
-    "list": [],
+    "list": [
+      "10247",
+      "10257"
+    ],
     "set": ""
   },
   {
     "account": "lego191",
     "password": 2531,
-    "name": "",
+    "name": "曾吉志",
     "pickup": "",
-    "list": [],
+    "list": [
+      "10193",
+      "10223",
+      "7079",
+      "8823",
+      "71006",
+      "71016",
+      "70617",
+      "70618",
+      "70620",
+      "70656",
+      "70657",
+      "70751",
+      "21311",
+      "75936",
+      "75810",
+      "71044",
+      "10247",
+      "10257",
+      "70840",
+      "10218",
+      "21310",
+      "10211",
+      "10243",
+      "80102"
+    ],
     "set": ""
   },
   {
     "account": "lego192",
     "password": 2447,
-    "name": "",
+    "name": "李育玟",
     "pickup": "",
-    "list": [],
+    "list": [
+      "70620",
+      "70657"
+    ],
     "set": ""
   },
   {
     "account": "lego193",
     "password": 3920,
-    "name": "",
+    "name": "Marty Ma",
     "pickup": "",
-    "list": [],
+    "list": [
+      "70840",
+      "10257",
+      "10247",
+      "10253",
+      "10214",
+      "71006",
+      "71016",
+      "21303",
+      "10242",
+      "80101",
+      "80102",
+      "80103",
+      "80104"
+    ],
     "set": ""
   },
   {
     "account": "lego194",
     "password": 7090,
-    "name": "",
+    "name": "葉秉澄",
     "pickup": "",
-    "list": [],
+    "list": [
+      "70916",
+      "70917",
+      "70923"
+    ],
     "set": ""
   },
   {
     "account": "lego195",
     "password": 2983,
-    "name": "",
+    "name": "Cheng-Jen Kuo",
     "pickup": "",
-    "list": [],
+    "list": [
+      "3818",
+      "3831",
+      "10259"
+    ],
     "set": ""
   },
   {
     "account": "lego196",
     "password": 9247,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Cheng Yang",
+    "pickup": 1,
+    "list": [
+      "70922",
+      "70917"
+    ],
     "set": ""
   },
   {
     "account": "lego197",
     "password": 8579,
+    "name": "Sheng-Kung Hsu",
+    "pickup": "",
+    "list": [],
+    "set": "星際大戰I;星際大戰II;英雄系列"
+  },
+  {
+    "account": "lego198",
+    "password": 3221,
+    "name": "李明震",
+    "pickup": "",
+    "list": [
+      "42063"
+    ],
+    "set": ""
+  },
+  {
+    "account": "lego199",
+    "password": 1708,
+    "name": "李發財",
+    "pickup": "",
+    "list": [
+      "8683",
+      "8803",
+      "8833",
+      "71000",
+      "8909"
+    ],
+    "set": ""
+  },
+  {
+    "account": "lego200",
+    "password": 9082,
     "name": "",
     "pickup": "",
     "list": [],
     "set": ""
   },
   {
-    "account": "lego198",
-    "password": 3221,
+    "account": "lego201",
+    "password": 8287,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego202",
+    "password": 8036,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego203",
+    "password": 1091,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego204",
+    "password": 6083,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego205",
+    "password": 1663,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego206",
+    "password": 4807,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego207",
+    "password": 1002,
+    "name": "",
+    "pickup": "",
+    "list": [],
+    "set": ""
+  },
+  {
+    "account": "lego208",
+    "password": 1745,
     "name": "",
     "pickup": "",
     "list": [],
