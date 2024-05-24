@@ -1,4 +1,4 @@
-[
+export const userList = [
   {
     "account": "lego100",
     "password": 6487,
