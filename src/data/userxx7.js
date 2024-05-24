@@ -736,7 +736,7 @@ export const userList = [
     "account": "lego153",
     "password": 5746,
     "name": "Yu Ting Tsai",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "80101",
       "80102",
@@ -764,49 +764,78 @@ export const userList = [
   {
     "account": "lego154",
     "password": 9175,
-    "name": "",
-    "pickup": "",
+    "name": "王翊帆",
+    "pickup": 0,
     "list": [],
-    "set": ""
+    "set": "全"
   },
   {
     "account": "lego155",
     "password": 5793,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Cj Hsu",
+    "pickup": 0,
+    "list": [
+      "71741",
+      "75810"
+    ],
     "set": ""
   },
   {
     "account": "lego156",
     "password": 7438,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "劉怡均",
+    "pickup": 0,
+    "list": [
+      "71006",
+      "71016",
+      "3818"
+    ],
     "set": ""
   },
   {
     "account": "lego157",
     "password": 1876,
-    "name": "",
-    "pickup": "",
+    "name": "陳博彥",
+    "pickup": 0,
     "list": [],
-    "set": ""
+    "set": "人偶"
   },
   {
     "account": "lego158",
     "password": 3793,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Tony",
+    "pickup": 0,
+    "list": [
+      "75810",
+      "70840",
+      "71044",
+      "70620",
+      "7079",
+      "10223",
+      "4002019",
+      "75181",
+      "75212",
+      "75243",
+      "75244",
+      "70917",
+      "70922",
+      "70923",
+      "9465"
+    ],
     "set": ""
   },
   {
     "account": "lego159",
     "password": 3233,
-    "name": "",
+    "name": "James Liao",
     "pickup": "",
-    "list": [],
+    "list": [
+      "10251",
+      "10232",
+      "10211",
+      "10218",
+      "10197"
+    ],
     "set": ""
   },
   {
