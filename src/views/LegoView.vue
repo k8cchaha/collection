@@ -72,7 +72,7 @@ import { mapState } from 'pinia';
 import { useDeviceStore } from '../stores/useDeviceStore';
 import { useUserStore } from '../stores/useUserStore';
 import { legoList } from '../data/lego.js';
-import { placeList } from '../data/place.js';
+import { placeList } from '../data/placex2.js';
 import ShopList from '../components/ShopList.vue';
 
 export default {

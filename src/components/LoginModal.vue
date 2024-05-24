@@ -22,8 +22,8 @@
 
 <script>
 import { useUserStore } from '../stores/useUserStore';
-import { userList } from '../data/userxx4.js';
-import { placeList } from '../data/place.js';
+import { userList } from '../data/userxx7.js';
+import { placeList } from '../data/placex2.js';
 
 export default {
   data() {
@@ -60,12 +60,16 @@ export default {
               }
             }
           }
+          if (this.userList[i].set === '全') {
+            const allLego = JSON.parse(localStorage.getItem('lego'));
+            fromSet.push(...allLego.map((item)=>Number(item.set)))
+          }
           
           this.userStore.setUserInfo({
             name: `嗨! ${this.userList[i].name}`,
             pickup: this.userList[i].pickup == '1'? true : false,
             list: [...this.userList[i].list.map((item)=>Number(item)), ...fromSet]
-          })
+          });
           
           isSuccess = true;
           this.closeModal();
