@@ -2,7 +2,16 @@
   <div v-if="showModal" class="modal-overlay">
     <div class="modal">
       <h2>登入</h2>
-      <input type="text" v-model="username" placeholder="帳號" />
+      <div>
+        <label for="user-account">帳號：</label>
+        <input id="user-account" type="text" v-model="username" placeholder="請輸入帳號" />
+      </div>
+      <div>
+        <label for="user-password">密碼：</label>
+        <input id="user-password" type="password" v-model="password" placeholder="請輸入密碼" />
+      </div>
+      
+      
       <div class="modal-buttons">
         <button @click="closeModal">取消</button>
         <button @click="login">確認</button>
@@ -19,6 +28,7 @@ export default {
     return {
       showModal: false,
       username: '',
+      password: '',
       userStore: useUserStore()
     };
   },
@@ -29,6 +39,7 @@ export default {
     closeModal() {
       this.showModal = false;
       this.username = '';
+      this.password = '';
     },
     login() {
       // 找到
@@ -73,13 +84,17 @@ export default {
 .modal input {
   font-size: 18px;
   line-height: 30px;
-  width: 200px;
+  width: 160px;
+  margin-bottom: 10px;
+}
+.modal label {
+  color: black;
 }
 
 .modal-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .modal-buttons button {
