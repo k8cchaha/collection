@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="logo" @click="goHome">{{ $t('message.logo') }}</div>
+    <div class="logo" @click="goHome">Alex的收藏</div>
     <nav v-if="!isMobile">
       <router-link to="/">HOME</router-link> | 
       <router-link to="/lego">LEGO</router-link> | 

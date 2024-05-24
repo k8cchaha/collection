@@ -22,7 +22,7 @@
 
 <script>
 import { useUserStore } from '../stores/useUserStore';
-import { userList } from '../data/userxx3.js';
+import { userList } from '../data/userxx4.js';
 import { placeList } from '../data/place.js';
 
 export default {

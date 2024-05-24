@@ -19,10 +19,7 @@ export const userList = [
     "list": [
       "10182",
       "10185",
-      "10190",
-      "21311",
-      "42113",
-      "42056"
+      "10190"
     ],
     "set": ""
   },
@@ -272,89 +269,141 @@ export const userList = [
   {
     "account": "lego118",
     "password": 4800,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "羅人晧",
+    "pickup": 0,
+    "list": [
+      "40433",
+      "42083",
+      "42096",
+      "42115",
+      "76023",
+      "42056"
+    ],
     "set": ""
   },
   {
     "account": "lego119",
     "password": 8382,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Jamie Lin",
+    "pickup": 0,
+    "list": [
+      "75159",
+      "75181",
+      "75144",
+      "75244",
+      "10188",
+      "10236",
+      "75252",
+      "75192"
+    ],
     "set": ""
   },
   {
     "account": "lego120",
     "password": 8533,
-    "name": "",
-    "pickup": "",
-    "list": [],
-    "set": ""
+    "name": "Amy Deng",
+    "pickup": 0,
+    "list": [
+      "71043",
+      "71044"
+    ],
+    "set": "哈利波特"
   },
   {
     "account": "lego121",
     "password": 6214,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "陳御",
+    "pickup": 0,
+    "list": [
+      "71006",
+      "71016",
+      "71017",
+      "71020",
+      "71026"
+    ],
     "set": ""
   },
   {
     "account": "lego122",
     "password": 8235,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Abner",
+    "pickup": 0,
+    "list": [
+      "7595",
+      "21316",
+      "71006",
+      "21303"
+    ],
     "set": ""
   },
   {
     "account": "lego123",
     "password": 3591,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "林昱成",
+    "pickup": 0,
+    "list": [
+      "8683",
+      "8684",
+      "8833",
+      "71000",
+      "71001"
+    ],
     "set": ""
   },
   {
     "account": "lego124",
     "password": 5042,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "楊博宇",
+    "pickup": 0,
+    "list": [
+      "71043",
+      "76392"
+    ],
     "set": ""
   },
   {
     "account": "lego125",
     "password": 6857,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "余可富",
+    "pickup": 0,
+    "list": [
+      "71006",
+      "75827",
+      "10236"
+    ],
     "set": ""
   },
   {
     "account": "lego126",
     "password": 2577,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Tien-chun Lin",
+    "pickup": 0,
+    "list": [
+      "75936",
+      "21028"
+    ],
     "set": ""
   },
   {
     "account": "lego127",
     "password": 7440,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "Jerry Lin",
+    "pickup": 0,
+    "list": [
+      "75192",
+      "75252"
+    ],
     "set": ""
   },
   {
     "account": "lego128",
     "password": 3349,
-    "name": "",
-    "pickup": "",
-    "list": [],
+    "name": "湯佳穎",
+    "pickup": 0,
+    "list": [
+      "10251",
+      "10197"
+    ],
     "set": ""
   },
   {
