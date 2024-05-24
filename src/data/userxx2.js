@@ -78,7 +78,7 @@ export const userList = [
     "name": "Jeremy Yang",
     "pickup": "",
     "list": [
-      "10233",
+      "10223",
       "10193",
       "21313",
       "21310"
@@ -135,7 +135,7 @@ export const userList = [
     "account": "lego109",
     "password": 7002,
     "name": "Johnson",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "75243",
       "75021",
@@ -148,9 +148,20 @@ export const userList = [
   {
     "account": "lego110",
     "password": 7648,
-    "name": "",
+    "name": "日勻達",
     "pickup": "",
-    "list": []
+    "list": [
+      "6865",
+      "76005",
+      "76039",
+      "76042",
+      "76081",
+      "76084",
+      "76104",
+      "76109",
+      "76124",
+      "76126"
+    ]
   },
   {
     "account": "lego111",
