@@ -22,7 +22,8 @@
 
 <script>
 import { useUserStore } from '../stores/useUserStore';
-import { userList } from '../data/userxx2.js';
+import { userList } from '../data/userxx3.js';
+import { placeList } from '../data/place.js';
 
 export default {
   data() {
@@ -31,7 +32,8 @@ export default {
       username: '',
       password: '',
       userStore: useUserStore(),
-      userList: userList
+      userList: userList,
+      placeList: placeList
     };
   },
   methods: {
@@ -46,12 +48,25 @@ export default {
     login() {
       let isSuccess = false;
       for (let i = 0; i < this.userList.length; i++) {
-        if (this.userList[i].account === this.username && this.userList[i].password == this.password) {
+        if (this.userList[i].account.toLowerCase() === this.username.toLowerCase() && this.userList[i].password == this.password) {
+          let fromSet = []
+          if (this.userList[i].set) {
+            const totalSet = this.userList[i].set.split(';');
+            for (let i = 0; i < totalSet.length; i++) {
+              for (let j = 0; j < this.placeList.length; j++) {
+                if (totalSet[i] === this.placeList[j].name) {
+                  fromSet.push(...this.placeList[j].list)
+                }
+              }
+            }
+          }
+          
           this.userStore.setUserInfo({
             name: `嗨! ${this.userList[i].name}`,
             pickup: this.userList[i].pickup == '1'? true : false,
-            list: this.userList[i].list.map((item)=>Number(item))
+            list: [...this.userList[i].list.map((item)=>Number(item)), ...fromSet]
           })
+          
           isSuccess = true;
           this.closeModal();
           break;

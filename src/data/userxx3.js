@@ -8,7 +8,8 @@ export const userList = [
       "42056",
       "42100",
       "42000"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego101",
@@ -22,7 +23,8 @@ export const userList = [
       "21311",
       "42113",
       "42056"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego102",
@@ -50,7 +52,8 @@ export const userList = [
       "7659",
       "8016",
       "75049"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego103",
@@ -70,19 +73,21 @@ export const userList = [
       "71019",
       "71022",
       ""
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego104",
     "password": 9827,
     "name": "Jeremy Yang",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "10223",
       "10193",
       "21313",
       "21310"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego105",
@@ -97,7 +102,8 @@ export const userList = [
       "60227",
       "60228",
       "60229"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego106",
@@ -107,19 +113,21 @@ export const userList = [
     "list": [
       "21303",
       "75952"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego107",
     "password": 9751,
     "name": "詹世勳",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "10253",
       "10241",
       "75244",
       "76042"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego108",
@@ -129,7 +137,8 @@ export const userList = [
     "list": [
       "70677",
       "70674"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego109",
@@ -143,13 +152,14 @@ export const userList = [
       "75261",
       "7752",
       "8016"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego110",
     "password": 7648,
     "name": "日勻達",
-    "pickup": "",
+    "pickup": 0,
     "list": [
       "6865",
       "76005",
@@ -161,265 +171,342 @@ export const userList = [
       "76109",
       "76124",
       "76126"
-    ]
+    ],
+    "set": ""
   },
   {
     "account": "lego111",
     "password": 3339,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "蘇保嘉",
+    "pickup": 1,
+    "list": [
+      "75810"
+    ],
+    "set": ""
   },
   {
     "account": "lego112",
     "password": 8389,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "Lilian",
+    "pickup": 0,
+    "list": [
+      "70840",
+      "75810",
+      "75980",
+      "80101",
+      "80102",
+      "70922"
+    ],
+    "set": ""
   },
   {
     "account": "lego113",
     "password": 7031,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "Pohsun Chou",
+    "pickup": 0,
+    "list": [
+      "4002019",
+      "75259",
+      "75095",
+      "10260",
+      "10243",
+      "76139",
+      "70618",
+      "70657"
+    ],
+    "set": ""
   },
   {
     "account": "lego114",
     "password": 7813,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "Thompson",
+    "pickup": 0,
+    "list": [
+      "10251",
+      "70620",
+      "70657",
+      "21310",
+      "75252",
+      "75192",
+      "21319",
+      "70840"
+    ],
+    "set": ""
   },
   {
     "account": "lego115",
     "password": 8494,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "Alan Wei",
+    "pickup": 0,
+    "list": [
+      "4002019",
+      "75244",
+      "7659"
+    ],
+    "set": ""
   },
   {
     "account": "lego116",
     "password": 9437,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "羅日昇",
+    "pickup": 1,
+    "list": [
+      "10251",
+      "10254",
+      "10260",
+      "10257",
+      "71044",
+      "7637",
+      "4207"
+    ],
+    "set": ""
   },
   {
     "account": "lego117",
     "password": 1024,
-    "name": "",
-    "pickup": "",
-    "list": []
+    "name": "鄭名哲",
+    "pickup": 1,
+    "list": [],
+    "set": "街景 + 大型建築"
   },
   {
     "account": "lego118",
     "password": 4800,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego119",
     "password": 8382,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego120",
     "password": 8533,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego121",
     "password": 6214,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego122",
     "password": 8235,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego123",
     "password": 3591,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego124",
     "password": 5042,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego125",
     "password": 6857,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego126",
     "password": 2577,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego127",
     "password": 7440,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego128",
     "password": 3349,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego129",
     "password": 1733,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego130",
     "password": 1175,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego131",
     "password": 4687,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego132",
     "password": 5744,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego133",
     "password": 1452,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego134",
     "password": 3932,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego135",
     "password": 4537,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego136",
     "password": 9715,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego137",
     "password": 8596,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego138",
     "password": 8831,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego139",
     "password": 4694,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego140",
     "password": 8862,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego141",
     "password": 8666,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego142",
     "password": 6823,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego143",
     "password": 1011,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego144",
     "password": 7953,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego145",
     "password": 1206,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego146",
     "password": 6499,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   },
   {
     "account": "lego147",
     "password": 2895,
     "name": "",
     "pickup": "",
-    "list": []
+    "list": [],
+    "set": ""
   }
 ]
