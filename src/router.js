@@ -5,6 +5,7 @@ import CardView from './views/CardView.vue'
 import GkView from './views/GkView.vue'
 import ToysView from './views/ToysView.vue'
 import AboutView from './views/AboutView.vue'
+import ReportView from './views/ReportView.vue'
 
 const routes = [
   { path: '/', component: HomeView },
@@ -12,7 +13,8 @@ const routes = [
   { path: '/card', component: CardView },
   { path: '/gk', component: GkView },
   { path: '/toys', component: ToysView },
-  { path: '/about', component: AboutView }
+  { path: '/about', component: AboutView },
+  { path: '/report', component: ReportView }
 ]
 
 const path = process.env.NODE_ENV === 'production' ? '/collection/' : ''

@@ -128,7 +128,7 @@ export default {
 
       try {
         const sourcePathBase = process.env.NODE_ENV === 'production' ? '/collection' : '';
-        const response = await fetch(sourcePathBase + '/data/lego.json');
+        const response = await fetch(sourcePathBase + '/data/legov2.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -138,7 +138,10 @@ export default {
             set: obj.Set.split('-')[0],
             name: obj.Name,
             title: obj.Title,
+            price: obj.Valuation,
             new: obj.New,
+            only: obj.only,
+            note: obj.note,
             grown: obj.Growth,
             theme: obj.Theme.replace('Icons', 'CREATOR').split(' \/ '),
             mainImg: imgSource + obj['main-img'],
@@ -150,7 +153,7 @@ export default {
         this.updateDetailList();
 
         if (localStorage) {
-          localStorage.setItem('lego', JSON.stringify(this.allLego))
+          localStorage.setItem('lego2', JSON.stringify(this.allLego))
         }
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
@@ -184,8 +187,8 @@ export default {
     }
   },
   mounted() {
-    if (localStorage && localStorage.getItem('lego')) {
-      this.allLego = JSON.parse(localStorage.getItem('lego'));
+    if (localStorage && localStorage.getItem('lego2')) {
+      this.allLego = JSON.parse(localStorage.getItem('lego2'));
       this.updateDetailList();
     } else {
       this.getLegoInfo();
