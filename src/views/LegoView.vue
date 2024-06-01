@@ -128,7 +128,7 @@ export default {
 
       try {
         const sourcePathBase = process.env.NODE_ENV === 'production' ? '/collection' : '';
-        const response = await fetch(sourcePathBase + '/data/legov2.json');
+        const response = await fetch(sourcePathBase + '/data/legov3.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -153,7 +153,7 @@ export default {
         this.updateDetailList();
 
         if (localStorage) {
-          localStorage.setItem('lego2', JSON.stringify(this.allLego))
+          localStorage.setItem('legov3', JSON.stringify(this.allLego))
         }
       } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
@@ -187,8 +187,8 @@ export default {
     }
   },
   mounted() {
-    if (localStorage && localStorage.getItem('lego2')) {
-      this.allLego = JSON.parse(localStorage.getItem('lego2'));
+    if (localStorage && localStorage.getItem('legov3')) {
+      this.allLego = JSON.parse(localStorage.getItem('legov3'));
       this.updateDetailList();
     } else {
       this.getLegoInfo();

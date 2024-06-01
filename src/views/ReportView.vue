@@ -40,7 +40,7 @@
 import LegoItem from '../components/LegoItem.vue';
 import { useUserStore } from '../stores/useUserStore';
 import { legoList } from '../data/lego.js';
-import { userList } from '../data/userxx12.js';
+import { userList } from '../data/userxx13.js';
 import { placeList } from '../data/placex2.js';
 
 export default {
@@ -73,7 +73,7 @@ export default {
 
       try {
         const sourcePathBase = process.env.NODE_ENV === 'production' ? '/collection' : '';
-        const response = await fetch(sourcePathBase + '/data/legov2.json');
+        const response = await fetch(sourcePathBase + '/data/legov3.json');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -94,7 +94,7 @@ export default {
         })
 
         if (localStorage) {
-          localStorage.setItem('lego2', JSON.stringify(this.allLego))
+          localStorage.setItem('legov3', JSON.stringify(this.allLego))
         }
         this.doAnalysis();
       } catch (error) {
@@ -119,7 +119,7 @@ export default {
           }
         }
         if (this.userList[i].set === '全') {
-          const allLego = JSON.parse(localStorage.getItem('lego2'));
+          const allLego = JSON.parse(localStorage.getItem('legov3'));
           fromSet.push(...allLego.map((item)=>Number(item.set)))
         }
         if (this.userList[i].not !== '') {
@@ -200,8 +200,8 @@ export default {
     }
   },
   mounted() {
-    if (localStorage && localStorage.getItem('lego2')) {
-      this.allLego = JSON.parse(localStorage.getItem('lego2'));
+    if (localStorage && localStorage.getItem('legov3')) {
+      this.allLego = JSON.parse(localStorage.getItem('legov3'));
       this.doAnalysis();
       this.doUserAnalysis()
     } else {
