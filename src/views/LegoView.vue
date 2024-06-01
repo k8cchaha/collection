@@ -84,7 +84,7 @@ export default {
 },
   data() {
     return {
-      mode: 'place',
+      mode: 'data',
       photosPerRow: 3,
       legoList: legoList,
       placeList: placeList,

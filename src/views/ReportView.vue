@@ -40,7 +40,8 @@
 import LegoItem from '../components/LegoItem.vue';
 import { useUserStore } from '../stores/useUserStore';
 import { legoList } from '../data/lego.js';
-import { userList } from '../data/userxx11.js';
+import { userList } from '../data/userxx12.js';
+import { placeList } from '../data/placex2.js';
 
 export default {
   name: 'LegoView',
@@ -53,6 +54,7 @@ export default {
       allLego: [],
       userStore: useUserStore(),
       userList: userList,
+      placeList: placeList,
       userListNew: [],
       report: [],
       totalGood: {
@@ -102,6 +104,62 @@ export default {
     handleUserList() {
 
     },
+    doUserAnalysis() {
+      console.log('hello')
+      for (let i = 0; i < this.userList.length; i++) {
+        let fromSet = []
+        if (this.userList[i].set) {
+          const totalSet = this.userList[i].set.split(';');
+          for (let i = 0; i < totalSet.length; i++) {
+            for (let j = 0; j < this.placeList.length; j++) {
+              if (totalSet[i] === this.placeList[j].name) {
+                fromSet.push(...this.placeList[j].list)
+              }
+            }
+          }
+        }
+        if (this.userList[i].set === '全') {
+          const allLego = JSON.parse(localStorage.getItem('lego2'));
+          fromSet.push(...allLego.map((item)=>Number(item.set)))
+        }
+        if (this.userList[i].not !== '') {
+          const idx = fromSet.indexOf(Number(this.userList[i].not));
+          fromSet.splice(idx, 1);
+        }
+        this.userList[i].superset = [...this.userList[i].list.map((item)=>Number(item)), ...fromSet]
+        // this.userStore.setUserInfo({
+        //   name: `嗨! ${this.userList[i].name}`,
+        //   pickup: this.userList[i].pickup == '1'? true : false,
+        //   list: [...this.userList[i].list.map((item)=>Number(item)), ...fromSet]
+        // });
+        
+        // isSuccess = true;
+        // this.closeModal();
+        // break;
+      }
+      this.userListNew = []
+
+      for (let j = 0; j < this.userList.length; j++) {
+        let total = 0;
+        for (let k = 0; k < this.userList[j].superset.length; k++) {
+          for (let v = 0; v < this.allLego.length; v++) {
+            if (this.allLego[v].set == this.userList[j].superset[k]) {
+              total += this.allLego[v].price;
+              break;
+            }
+          }
+        }
+        this.userListNew.push({
+          name: this.userList[j].name,
+          pickup: this.userList[j].pickup,
+          total: total
+        })
+      }
+      this.userListNew.sort((a, b) => b.total - a.total);
+
+      console.log('FFFFF', this.userListNew)
+      // console.log('KKKKK', this.legoList)
+    },
     doAnalysis() {
       for (let i = 0; i < this.allLego.length; i++) {
         this.allLego[i].count = 0;
@@ -115,8 +173,8 @@ export default {
       }
       
       for (let i = 0; i < this.allLego.length; i++) {
-        console.log(this.allLego[i].set)
-        console.log(this.totalGood.amount + this.totalBad.amount)
+        // console.log(this.allLego[i].set)
+        // console.log(this.totalGood.amount + this.totalBad.amount)
 
         if (this.allLego[i].new || this.allLego[i].only) {
           if (this.allLego[i].count > 0) {
@@ -145,6 +203,7 @@ export default {
     if (localStorage && localStorage.getItem('lego2')) {
       this.allLego = JSON.parse(localStorage.getItem('lego2'));
       this.doAnalysis();
+      this.doUserAnalysis()
     } else {
       this.getLegoInfo();
     }
